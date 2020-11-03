@@ -1,0 +1,10 @@
+.signin {
+  text-align: center;
+}
+.signin h3 {
+  font-size: 3.5rem;
+}
+.signin-btn {
+  font-size: 1.2rem;
+  padding: 1em 3em;
+}

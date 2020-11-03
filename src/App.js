@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./comps/Home/Home";
+import SignIn from "./comps/Signin/SignIn";
+import { projectAuth } from "./firebase/config";
+import { useAuthState } from "react-firebase-hooks/auth";
+import "./App.css";
+import Navbar from "./comps/Navbar/Navbar";
 
 function App() {
+  const [user] = useAuthState(projectAuth);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <section>{user ? <Home /> : <SignIn />}</section>
     </div>
   );
 }

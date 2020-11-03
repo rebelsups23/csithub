@@ -1,0 +1,21 @@
+.post-container {
+  background-color: var(--color-secondary);
+  margin: 2em 0;
+  padding: 2em;
+  border-radius: 10px;
+}
+.post {
+  display: flex;
+}
+.post-heading {
+  font-size: 1rem;
+  margin-left: 1em;
+}
+
+.user-image {
+  width: 50px;
+  border-radius: 50%;
+}
+.post-content {
+  margin-left: 0.8em;
+}
